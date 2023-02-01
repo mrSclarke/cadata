@@ -1,1 +1,33 @@
-
+<div ng-click="passEvent($event)" class="section" style="min-height: 400px; overflow: visible">
+    <div class="sidebar" style="padding: 5px" ng-show="num==1">
+      <load-roster ng-click="shower(2)"></load-roster>
+      
+      <div style="padding: 10px">
+        <h4>Roster:</h4>
+          {{roster.name}}
+        <h4>Teachers:</h4>
+        <div ng-repeat="x in personnel">
+          <div>{{x.lastName}}</div>
+        </div>
+      </div>
+    </div>
+  
+  <div ng-show="num==2">
+    <div class="navbar" > 
+      <back-button ng-click="shower(1)"></back-button>
+    </div>
+    <div style="padding: 5px">
+      <assign-select></assign-select>
+    </div>
+  </div>
+    
+  <div ng-show="num==3">
+    <div class="navbar" ng-init='navlink="#/!"'> 
+      <back-button ng-click="shower(2)"></back-button>
+    </div>
+    <div class="sidebar" style="padding: 5px">
+      
+      <h1>Next!</h1>
+    </div>
+  </div>
+  </div>
