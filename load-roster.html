@@ -1,4 +1,4 @@
-<div ng-click="passEvent($event)" class="section" style="min-height: 400px; overflow: visible">
+
     <div class="sidebar" style="padding: 5px" ng-show="num==1">
       <load-roster ng-click="shower(2)"></load-roster>
       
@@ -12,14 +12,15 @@
       </div>
     </div>
   
-  <div ng-show="num==2">
+  <div class="sidebar" ng-show="num==2">
     <div class="navbar" > 
       <back-button ng-click="shower(1)"></back-button>
     </div>
     <div style="padding: 5px">
-      <assign-select></assign-select>
+      Updating spreadsheet. This may take several moments.
+      <a href="#/!"><okay-button></okay-button></a>
     </div>
   </div>
     
-  </div>
-  </div>
+
+
