@@ -21,18 +21,6 @@
 </div>
 
 <script>
-  function showSomething(a) {
-    var box = document.getElementsByClassName("sBox");
-    var index = 0;
-    var tokens = {};
-    for (var x in a) {
-      assignOptions[x] = a[x];
-      var options = box[index ++];
-      var html = "<a-options ng-controller='optCtrl' ng-show='opNum==" + x + "' ng-init='assOps = " + a[x] + "' id=" + x + "></a-options>";
-      options.insertAdjacentHTML("afterend", html);
-      tokens[x] = a[x].nextToken;
-    }
-    google.script.run.withSuccessHandler(saveAssigns).listAssignments(tokens);
-  }
+  google.script.run.withSuccessHandler(showSomething).listAssignments();
 </script>
 
