@@ -1,6 +1,10 @@
 <div class="section">
-  <div style="padding: 5px">How are your students taking this assessment?</div>
-  <a href="#!form"><div class='tdclass'> <rows-icon></rows-icon>Google Form </div> </a>
+  <div style="padding: 5px">If the information below is correct, you are ready to import scores once student work has been graded.</div>
+  
+  <div ng-repeat='(x, y) in classNames' class='sBox' ng-click='opShow(x,$event)'>
+    <table>
+      <tr><th>{{y | shorten:15}}:</th><td>{{assignments[x].name | shorten:20}}</td></tr>
+    </table>
+  </div>
 
-  <a href="#!assignments"><div class='tdclass'><rows-icon></rows-icon>Google Classroom</div></a>
 </div>
