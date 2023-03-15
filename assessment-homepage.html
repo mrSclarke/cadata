@@ -1,7 +1,7 @@
 <div class="section">
   <div style="padding: 5px">CADATA  will import scores for the following assignments:</div>
   
-  <div ng-repeat='(x, y) in classNames'>
+  <div ng-repeat='(x, y) in classNames' class="assTable">
     <table>
       <tr><th>{{y | shorten:15}}:</th><td>{{assignments[x].name | shorten:20}}</td></tr>
     </table>
