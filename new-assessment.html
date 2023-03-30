@@ -1,6 +1,26 @@
-<div class="section">
+<div class="section" ng-show="!hpage">
     <div style="padding: 5px">How are your students taking this assessment?</div>
     <a href="#!form"><div class='tdclass'> <rows-icon></rows-icon>Google Form </div> </a>
   
     <a href="#!assignments"><div class='tdclass' ng-click="setType('classroom')"><rows-icon></rows-icon>Google Classroom</div></a>
 </div>
+
+
+<div class="section" ng-show="hpage">
+    <div style="padding: 5px">CADATA  will import scores for the following assignments:</div>
+    
+    <div ng-repeat='(x, y) in classNames' class="assTable">
+      <table>
+        <tr><th>{{y | shorten:15}}:</th><td>{{assignments[x].name | shorten:20}}</td></tr>
+      </table>
+    </div>
+  
+    <div class='tdclass actionbutton' ng-click="importScores()"><b>Import scores</b></div>
+  
+  </div>
+  
+  <div class="section">
+  
+    <a href="#!assignments"><div class='tdclass'><rows-icon></rows-icon>Change assignments</div></a>
+  
+  </div>
