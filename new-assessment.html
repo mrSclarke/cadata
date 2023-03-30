@@ -5,8 +5,8 @@
     <a href="#!assignments"><div class='tdclass' ng-click="setType('classroom')"><rows-icon></rows-icon>Google Classroom</div></a>
 </div>
 
-
-<div class="section" ng-show="hpage">
+<div ng-show="hpage">
+<div class="section">
     <div style="padding: 5px">CADATA  will import scores for the following assignments:</div>
     
     <div ng-repeat='(x, y) in classNames' class="assTable">
@@ -24,3 +24,4 @@
     <a href="#!assignments"><div class='tdclass'><rows-icon></rows-icon>Change assignments</div></a>
   
   </div>
+</div>
