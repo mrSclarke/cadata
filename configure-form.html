@@ -5,9 +5,14 @@
         <a href="#/!"><back-button></back-button></a>
       </div>
 
-      <add-form ng-show="!form"></add-form>
-      <configure-form ng-disabled="true" ng-click="formConfig()"></configure-form>
-      
+      <div ng-show="!form">
+        <add-form></add-form>
+      </div>
+
+      <div ng-show="form">
+        <configure-form ng-click="formConfig()"></configure-form>
+      </div>
+        
       <div style="padding: 10px">
         <h4>Roster:</h4>
           {{roster.name}}
